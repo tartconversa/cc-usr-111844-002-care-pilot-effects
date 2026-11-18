@@ -1,0 +1,53 @@
+{
+  "name": "care-pilot-effects",
+  "tables": {
+    "panel": [
+      {
+        "household": "h1",
+        "month": "2025-01",
+        "district": "a",
+        "care_hours": 20,
+        "spending": 300,
+        "weight": 1
+      },
+      {
+        "household": "h1",
+        "month": "2025-02",
+        "district": "a",
+        "care_hours": 18,
+        "spending": 280,
+        "weight": 1
+      }
+    ],
+    "policies": [
+      {
+        "district": "a",
+        "announced": "2025-03",
+        "effective": "2025-05",
+        "revision": "p1"
+      }
+    ],
+    "moves": [
+      {
+        "household": "h1",
+        "month": "2025-02",
+        "district": "b"
+      }
+    ],
+    "applicants": [
+      {
+        "district": "c",
+        "older_share": 0.3,
+        "baseline_use": 2
+      }
+    ],
+    "profiles": [
+      {
+        "district": "a",
+        "older_share": 0.2,
+        "baseline_use": 2
+      }
+    ]
+  },
+  "options": {}
+}

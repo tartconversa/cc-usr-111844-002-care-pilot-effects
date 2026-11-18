@@ -1,0 +1,1 @@
+SCHEMA = {'panel': ['household', 'month', 'district', 'care_hours', 'spending', 'weight'], 'policies': ['district', 'announced', 'effective', 'revision'], 'moves': ['household', 'month', 'district'], 'applicants': ['district', 'older_share', 'baseline_use'], 'profiles': ['district', 'older_share', 'baseline_use']}

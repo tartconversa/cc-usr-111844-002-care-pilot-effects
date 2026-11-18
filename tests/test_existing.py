@@ -58,5 +58,11 @@ class ExistingContracts(unittest.TestCase):
     def test_group_presence(self):
         self.assertEqual(len(group_rows([{},dict(x=None)],['x'])),2)
 
+    def test_residence_is_not_reporting_district(self):
+        t=self.study.tables
+        self.assertEqual(panel.residence_at(t['panel'],t['moves'],'h1','2025-01'),'a')
+        self.assertEqual(panel.residence_at(t['panel'],t['moves'],'h1','2025-02'),'b')
+        self.assertEqual(panel.raw_district_means(t['panel']),{'a':19})
+
 if __name__=='__main__':
     unittest.main()

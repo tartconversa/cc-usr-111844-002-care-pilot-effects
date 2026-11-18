@@ -12,6 +12,8 @@
 
 month 为 YYYY-MM；panel.district 是报送地区，moves 给出从当月开始的实际居住变更，应与报送差异显式核对。care_hours 为当月家庭无偿照护小时。policies.revision 是政策来源版本，不是待遇次数；profiles 与 applicants 仅含政策前特征。
 
+options 可保存 policy_revision、origin（announced/effective）、anticipation_months 及家庭首次纳入规则。一次政策修订包含每个地区完整日期定义；空日期表示未确定，不能用其他地区日期补齐。panel 可附加政策前结构属性，不允许把结果期特征冒充政策前特征。跨期家庭标识不变，迁移后原家庭仍属于最初追踪对象。
+
 analysis_core/panel.py 中的公开函数用于原始核对。household_history 保留当前参数及返回语义。原始资料查询不代表已经完成统计识别或政策判断。examples/study.json 是可读的合成资料，数值不表示真实地区或人群。
 
 Archive 用 name 和完整内容摘要区分原始资料修订。相同内容重复存入不会增加修订，不同内容不会覆盖旧资料；read 以精确摘要读取。Study.tables 和 Study.options 每次返回独立副本。group_rows 用属性是否存在与属性值共同分组；numeric_summary 分别报告条数、有效数值及空值。已有资料结构、原始查询及归档读取继续对外可用。
